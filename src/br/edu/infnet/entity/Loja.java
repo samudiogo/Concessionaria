@@ -6,7 +6,7 @@ public class Loja {
 	private int id;
 	private String nome;
 	private String endereco;
-	private ArrayList<Carros> listarCarros = new ArrayList<>();
+	private ArrayList<Carro> listarCarros = new ArrayList<>();
 	private ArrayList<Motocicleta> listarMotos = new ArrayList<>();
 
 	public Loja() {
@@ -15,7 +15,7 @@ public class Loja {
 	}
 
 	public Loja(int id, String nome, String endereco,
-			ArrayList<Carros> listarCarros,
+			ArrayList<Carro> listarCarros,
 			ArrayList<Motocicleta> listarMotos) {
 		super();
 		this.id = id;
@@ -49,11 +49,11 @@ public class Loja {
 		this.endereco = endereco;
 	}
 
-	public ArrayList<Carros> getListarCarros() {
+	public ArrayList<Carro> getListarCarros() {
 		return listarCarros;
 	}
 
-	public void setListarCarros(ArrayList<Carros> listarCarros) {
+	public void setListarCarros(ArrayList<Carro> listarCarros) {
 		this.listarCarros = listarCarros;
 	}
 

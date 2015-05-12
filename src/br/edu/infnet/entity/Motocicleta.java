@@ -1,68 +1,37 @@
 package br.edu.infnet.entity;
 
-import br.edu.infnet.entity.collections.TipoMotocicleta;
+import br.edu.infnet.entity.collections.*;
+import br.edu.infnet.entity.collections.motocicleta.*;
+import br.edu.infnet.entity.collections.motocicleta.TipoMotocicleta;
 
-public class Motocicleta {
 
-	private Integer id;
-	private String chassi;
-	private String fabricante;
-	private String modelo;
+
+public class Motocicleta extends VeiculoBase  {
+
+	private MontadoraMoto montadoraMoto;
 	private TipoMotocicleta tipoMoto;
-	private String cor;
 	private Integer cilindrada;
 	private Integer capacidadeTanque;
-	private Float preco;
-
-	public Motocicleta() {
-		super();
+	
+	public Motocicleta(){
+		
 	}
 
-	public Motocicleta(Integer id, String chassi, String fabricante,
-			String modelo, TipoMotocicleta tipoMoto, String cor,
-			Integer cilindrada, Integer capacidadeTanque, Float preco) {
-		super();
-		this.id = id;
-		this.chassi = chassi;
-		this.fabricante = fabricante;
-		this.modelo = modelo;
+	public Motocicleta(Integer id, String chassi, String modelo, Cores cor, float preco, MontadoraMoto montadoraMoto, TipoMotocicleta tipoMoto,
+			Integer cilindrada, Integer capacidadeTanque) {
+		super(id, chassi, modelo, cor, preco);
+		this.montadoraMoto = montadoraMoto;
 		this.tipoMoto = tipoMoto;
-		this.cor = cor;
 		this.cilindrada = cilindrada;
 		this.capacidadeTanque = capacidadeTanque;
-		this.preco = preco;
 	}
 
-	public Integer getId() {
-		return id;
+	public MontadoraMoto getMontadoraMoto() {
+		return montadoraMoto;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getChassi() {
-		return chassi;
-	}
-
-	public void setChassi(String chassi) {
-		this.chassi = chassi;
-	}
-
-	public String getFabricante() {
-		return fabricante;
-	}
-
-	public void setFabricante(String fabricante) {
-		this.fabricante = fabricante;
-	}
-
-	public String getModelo() {
-		return modelo;
-	}
-
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
+	public void setMontadoraMoto(MontadoraMoto montadoraMoto) {
+		this.montadoraMoto = montadoraMoto;
 	}
 
 	public TipoMotocicleta getTipoMoto() {
@@ -71,14 +40,6 @@ public class Motocicleta {
 
 	public void setTipoMoto(TipoMotocicleta tipoMoto) {
 		this.tipoMoto = tipoMoto;
-	}
-
-	public String getCor() {
-		return cor;
-	}
-
-	public void setCor(String cor) {
-		this.cor = cor;
 	}
 
 	public Integer getCilindrada() {
@@ -97,11 +58,46 @@ public class Motocicleta {
 		this.capacidadeTanque = capacidadeTanque;
 	}
 
-	public Float getPreco() {
-		return preco;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime
+				* result
+				+ ((capacidadeTanque == null) ? 0 : capacidadeTanque.hashCode());
+		result = prime * result
+				+ ((cilindrada == null) ? 0 : cilindrada.hashCode());
+		result = prime * result
+				+ ((montadoraMoto == null) ? 0 : montadoraMoto.hashCode());
+		result = prime * result
+				+ ((tipoMoto == null) ? 0 : tipoMoto.hashCode());
+		return result;
 	}
 
-	public void setPreco(Float preco) {
-		this.preco = preco;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Motocicleta other = (Motocicleta) obj;
+		if (capacidadeTanque == null) {
+			if (other.capacidadeTanque != null)
+				return false;
+		} else if (!capacidadeTanque.equals(other.capacidadeTanque))
+			return false;
+		if (cilindrada == null) {
+			if (other.cilindrada != null)
+				return false;
+		} else if (!cilindrada.equals(other.cilindrada))
+			return false;
+		if (montadoraMoto != other.montadoraMoto)
+			return false;
+		if (tipoMoto != other.tipoMoto)
+			return false;
+		return true;
 	}
+
 }
