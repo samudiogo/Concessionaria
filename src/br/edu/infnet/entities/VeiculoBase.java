@@ -64,6 +64,9 @@ public abstract class VeiculoBase {
 		this.preco = preco;
 	}
 	
-	public abstract ArrayList<Object> Pesquisar();	
+	public abstract ArrayList<Object> Pesquisar();
+	
+	public abstract boolean Remover();
+	public abstract boolean Adcionar();
 
 }

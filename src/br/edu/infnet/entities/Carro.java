@@ -86,8 +86,24 @@ public class Carro extends VeiculoBase {
 	@Override
 	public ArrayList<Object> Pesquisar() 
 	{
-		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public Carro PesquisarPorChassi(String chassi)
+	{
+		Carro c = new Carro();
+		
+		return c;
+	}
+	@Override
+	public boolean Remover() {
+		
+		return false;
+	}
+	@Override
+	public boolean Adcionar() {
+		
+		return false;
 	}
 	
 	

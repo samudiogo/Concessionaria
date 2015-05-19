@@ -107,4 +107,16 @@ public class Motocicleta extends VeiculoBase  {
 		return null;
 	}
 
+	@Override
+	public boolean Remover() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean Adcionar() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }
