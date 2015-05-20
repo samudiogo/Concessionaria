@@ -1,8 +1,8 @@
-package br.edu.infnet.entities.collections.motocicleta;
+package br.edu.infnet.model.collections.motocicleta;
 
 import java.util.ArrayList;
 
-public enum TipoMotocicleta {
+public enum Tipo {
 
 	CICLOMOTORES(1), MOTOCICLOS(2), SCOOTER(3), ESPORTIVAS(4), CUSTOM(5),
 	ROADSTERS(6), CHOPPER(7), NAKED(8), OFFROAD(9), POCKETBIKES(10),
@@ -10,7 +10,7 @@ public enum TipoMotocicleta {
 
 	private int opcoes ;
 
-	private TipoMotocicleta(int opcoes){
+	private Tipo(int opcoes){
 		this.opcoes = opcoes;
 	}
 
@@ -22,7 +22,7 @@ public enum TipoMotocicleta {
 
 		ArrayList<String> tipoMotos = new ArrayList<>();
 
-		for (TipoMotocicleta motos : TipoMotocicleta.values()){
+		for (Tipo motos : Tipo.values()){
 			tipoMotos.add(motos.toString());
 		}
 

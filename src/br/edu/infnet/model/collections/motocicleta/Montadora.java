@@ -1,6 +1,6 @@
-package br.edu.infnet.entities.collections.motocicleta;
+package br.edu.infnet.model.collections.motocicleta;
 
-public enum MontadoraMoto {
+public enum Montadora {
 
 	HONDA("Honda"), YAMAHA("Yamaha"), SUZUKI("Suzuki"), DAFRA("Dafra"),
 	SHINERAY("Shineray"), KAWASAKI("Kawasaki"), KASINSKI("Kasinski"), HARLEY_DAVIDSON("Harley Davidson"),
@@ -8,7 +8,7 @@ public enum MontadoraMoto {
 	
 	private final String montadora;
 	
-	private MontadoraMoto(String montadora){
+	private Montadora(String montadora){
 		
 		this.montadora = montadora;
 	}

@@ -1,4 +1,4 @@
-package br.edu.infnet.entities.collections.carro;
+package br.edu.infnet.model.collections.carro;
 
 public enum Cambio {
 	

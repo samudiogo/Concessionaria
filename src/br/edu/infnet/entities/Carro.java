@@ -3,19 +3,21 @@ package br.edu.infnet.entities;
 import java.util.ArrayList;
 
 import br.edu.infnet.entities.collections.*;
-import br.edu.infnet.entities.collections.carro.*;
+import br.edu.infnet.model.collections.carro.Cambio;
+import br.edu.infnet.model.collections.carro.Montadora;
+import br.edu.infnet.model.collections.carro.Tipo;
 
 public class Carro extends VeiculoBase {
 
-	private TipoCarro tipoCarro;
-	private MontadoraCarro montadoraCarro;
+	private Tipo tipoCarro;
+	private Montadora montadoraCarro;
 	private float motor;
 	private Cambio cambio;
 
 	public Carro() {
 	}
-	public Carro(Integer id, String chassi, String modelo, Cores cor, float preco, TipoCarro tipocarro, 
-		   MontadoraCarro montadoraCarro, float motor, Cambio cambio){
+	public Carro(Integer id, String chassi, String modelo, Cores cor, float preco, Tipo tipocarro, 
+		   Montadora montadoraCarro, float motor, Cambio cambio){
 
 		setId(id);
 		setChassi(chassi);
@@ -23,21 +25,21 @@ public class Carro extends VeiculoBase {
 		setCor(cor);
 		setPreco(preco);
 		setTipoCarro(tipoCarro);
-		setMontadoraCarro(montadoraCarro);
+		setMontadora(montadoraCarro);
 		setMotor(motor);
 		setCambio(cambio);	
 	}
 
-	public TipoCarro getTipoCarro() {
+	public Tipo getTipoCarro() {
 		return tipoCarro;
 	}
-	public void setTipoCarro(TipoCarro tipoCarro) {
+	public void setTipoCarro(Tipo tipoCarro) {
 		this.tipoCarro = tipoCarro;
 	}
-	public MontadoraCarro getMontadoraCarro() {
+	public Montadora getMontadoraCarro() {
 		return montadoraCarro;
 	}
-	public void setMontadoraCarro(MontadoraCarro montadoraCarro) {
+	public void setMontadora(Montadora montadoraCarro) {
 		this.montadoraCarro = montadoraCarro;
 	}
 	public float getMotor() {

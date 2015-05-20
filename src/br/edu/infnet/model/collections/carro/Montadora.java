@@ -1,6 +1,6 @@
-package br.edu.infnet.entities.collections.carro;
+package br.edu.infnet.model.collections.carro;
 
-public enum MontadoraCarro {
+public enum Montadora {
 	
 	FIAT("Fiat"), GM("General Motors"), VOLKSWAGEN("Volkswagen"), FORD("Ford"),
 	RENAULT("Renault"), HYUNDAI("Hyundai"), TOYOTA("Toyota"), HONDA("Honda"),
@@ -8,7 +8,7 @@ public enum MontadoraCarro {
 	
 	private final String montadora;
 	
-	private MontadoraCarro(String montadora){
+	private Montadora(String montadora){
 		this.montadora = montadora;
 	}
 

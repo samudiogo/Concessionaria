@@ -3,13 +3,14 @@ package br.edu.infnet.entities;
 import java.util.ArrayList;
 
 import br.edu.infnet.entities.collections.*;
-import br.edu.infnet.entities.collections.motocicleta.*;
+import br.edu.infnet.model.collections.motocicleta.Montadora;
+import br.edu.infnet.model.collections.motocicleta.Tipo;
 
 
 public class Motocicleta extends VeiculoBase  {
 
-	private MontadoraMoto montadoraMoto;
-	private TipoMotocicleta tipoMoto;
+	private Montadora montadoraMoto;
+	private Tipo tipoMoto;
 	private Integer cilindrada;
 	private Integer capacidadeTanque;
 	
@@ -17,7 +18,7 @@ public class Motocicleta extends VeiculoBase  {
 		
 	}
 
-	public Motocicleta(Integer id, String chassi, String modelo, Cores cor, float preco, MontadoraMoto montadoraMoto, TipoMotocicleta tipoMoto,
+	public Motocicleta(Integer id, String chassi, String modelo, Cores cor, float preco, Montadora montadoraMoto, Tipo tipoMoto,
 			Integer cilindrada, Integer capacidadeTanque) {
 		super(id, chassi, modelo, cor, preco);
 		this.montadoraMoto = montadoraMoto;
@@ -26,19 +27,19 @@ public class Motocicleta extends VeiculoBase  {
 		this.capacidadeTanque = capacidadeTanque;
 	}
 
-	public MontadoraMoto getMontadoraMoto() {
+	public Montadora getMontadoraMoto() {
 		return montadoraMoto;
 	}
 
-	public void setMontadoraMoto(MontadoraMoto montadoraMoto) {
+	public void setMontadoraMoto(Montadora montadoraMoto) {
 		this.montadoraMoto = montadoraMoto;
 	}
 
-	public TipoMotocicleta getTipoMoto() {
+	public Tipo getTipoMoto() {
 		return tipoMoto;
 	}
 
-	public void setTipoMoto(TipoMotocicleta tipoMoto) {
+	public void setTipoMoto(Tipo tipoMoto) {
 		this.tipoMoto = tipoMoto;
 	}
 
